@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.action-block {
+    display: flex;
+    width: 25%;
+    font-size: 18px;
+    min-width: 260px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-block a {
+    text-decoration: none;
+}
+
+.button {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+
+.button a:hover {
+    text-decoration: none;
+}
+
+.button-code {
+    position: absolute;
+    background-color: #0e153a;
+    color: white;
+    padding: 6px 0;
+    font-size: 18px;
+    border-radius: 3px;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+#button-hide-two {
+    cursor: pointer;
+}
+
+.button-overlay {
+    display: flex;
+    box-sizing: border-box;
+    width: 85%;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.button-title {
+    background-color: #13aa52;
+    color: white;
+    padding: 5px 14px;
+    font-size: 16px;
+    border-radius: 3px 0 0 3px;
+    width: 50%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    align-self: center;
+}
+
+.button-overlay img {
+    margin-left: -4px;
+    height: 41px;
+}
+
+.button-overlay:hover {
+    transform: translateX(-20px);
+}
+
+.button-code.revealed {
+    display: none;
+    background-color: transparent;
+    border: 2px dashed #13aa52;
+    box-sizing: border-box;
+    color: #333;
+    overflow: initial;
+    cursor: auto;
+    font-size: 16px !important;
+}
