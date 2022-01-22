@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 0.5s ease-in;
+
+}
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+}
+
+html {
+    transition: all 0.5s ease-in;
+
+}
+
+html.dark {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+}
+
+html.dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+button.dark {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+.clock {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+    /* background-size: cover;
+    background-image: url(https://miro.medium.com/max/400/1*F1irs2oWARQq1Oc9kCI4OA.png); */
+    /* border-radius: 50%;
+    border: 2px solid red; */
+}
+
+.needle {
+    position: absolute;
+    height: 50px;
+    width: 3px;
+    background-color: var(--primary-color);
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+}
+
+.needle.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+    width: 5px;
+    background-color: red;
+
+
+}
+
+.needle.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 60px;
+}
+
+.needle.second {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 80px;
+    width: 1px;
+    transition: 0.5s ease-in;
+}
+
+.center {
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.center::after {
+    content: '';
+    background-color: #000;
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.time {
+    font-size: 50px;
+}
+
+.date {
+    font-size: 16px;
+    color: silver;
+}
