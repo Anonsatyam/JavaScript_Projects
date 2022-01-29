@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #222;
+    font-family: 'Nunito Sans',
+        sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.3s ease-in;
+    padding: 15px 0;
+}
+
+.nav .container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: #fff;
+}
+
+.nav .container a {
+    color: #fff;
+    margin: 5px 8px;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 18px;
+}
+
+.nav.active {
+    background-color: #fff;
+    transition: all 0.3s ease-in;
+    padding: 0;
+}
+
+.nav.active .container {
+    color: #222;
+    transition: all 0.3s ease-in;
+}
+
+.nav.active .container a {
+    color: #222;
+}
+
+
+.nav .container a.active,
+.nav .container a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+.nav.active .container a.active {
+    color: red;
+    font-weight: bold;
+}
+
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 8px 15px;
+}
+
+
+
+.hero {
+    background-image: url(https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: -1;
+}
+
+.hero.container {
+    width: 700px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.content p {
+    line-height: 20px;
+    letter-spacing: 1px;
+}

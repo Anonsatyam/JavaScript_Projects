@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22d1ee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+.wrapper {
+    max-width: 400px;
+    width: 100%;
+    background-color: #e2f3f5;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.heading {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 36px;
+}
+
+.todoInput {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.todoInput input {
+    width: 85% !important;
+    padding: 0 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    font-family: 'Nunito',
+        sans-serif;
+}
+
+.todoInput input,
+.todoInput button {
+    height: 100%;
+    outline: none;
+}
+
+.todoInput button {
+    width: 50px;
+    background-color: #775ada;
+    border: none;
+    color: #fff;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.todoInput button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.wrapper li {
+    background-color: #dee1ec;
+    margin: 8px 0;
+    padding: 0 10px;
+    font-size: 16px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+    align-items: center;
+    position: relative;
+    line-height: 45px;
+    height: 45px;
+    overflow: hidden;
+    text-transform: capitalize;
+    font-family: 'Nunito',
+        sans-serif;
+}
+
+.todos li span {
+    background-color: #ff304f;
+    position: absolute;
+    right: -45px;
+    width: 45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    transition: 0.3s ease;
+    cursor: pointer;
+    color: #fff;
+}
+
+.todos li:hover span {
+    right: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    color: #000;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer button {
+    padding: 5px;
+    outline: none;
+    font-size: 16px;
+    background-color: #775ada;
+    border: none;
+    color: #fff;
+    font-family: 'Poppins',
+        sans-serif;
+    cursor: pointer;
+    border-radius: 3px;
+}
